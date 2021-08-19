@@ -1,0 +1,760 @@
+@import 'src/styles/variables_mixins/media';
+@import 'src/styles/variables_mixins/colors';
+@import 'src/styles/variables_mixins/positioning';
+@import 'src/styles/variables_mixins/hover';
+@import 'src/styles/variables_mixins/fonts';
+
+
+.to-do {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-top: 14px;
+
+  @include _1600 {
+    padding-top: 21px;
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 4px;
+
+    @include _768 {
+      margin-bottom: 9px;
+    }
+
+    @include _1600 {
+      margin-bottom: 19px;
+    }
+  }
+
+  .tabs {
+    display: flex;
+    flex-flow: column nowrap;
+    line-height: 2;
+
+    @include _768 {
+      line-height: 28px;
+    }
+
+    &__controls-bar {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-bottom: 20px;
+
+      @include _768 {
+        margin-bottom: 31px;
+        max-width: 342px;
+      }
+
+      @include _1024 {
+        max-width: 410px;
+      }
+
+      .tabs__divider {
+        flex-grow: 1;
+        border-bottom-color: $grey-C4;
+        border-bottom-style: solid;
+        border-bottom-width: 4px;
+      }
+    }
+
+    &__control {
+      padding: 0;
+      font-size: 14px;
+
+      &:first-of-type {
+        text-align: left;
+      }
+
+      &:nth-child(2) {
+        text-align: right;
+      }
+
+      @include _768 {
+        font-size: 16px;
+      }
+    }
+
+    .first,
+    .second {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+
+      @include _768 {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px 28px;
+      }
+    }
+
+    .first {
+      @include _1024 {
+        grid-template-columns: 1fr;
+        grid-gap: 20px 28px;
+      }
+
+      @include _1600 {
+        grid-gap: 25px 28px;
+      }
+    }
+
+    &__panel {
+      .card-primary {
+        @include _1024 {
+          display: flex;
+          align-items: center;
+        }
+
+        &__img {
+          position: relative;
+          margin-bottom: 15px;
+          min-height: 184px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-color: $primary;
+
+          @include _500 {
+            min-height: 280px;
+          }
+
+          @include _768 {
+            min-height: 182px;
+          }
+
+          @include _1024 {
+            margin-right: 29px;
+            margin-bottom: 0;
+            min-height: 184px;
+            min-width: 218px;
+          }
+
+          @include _1600 {
+            min-height: 140px;
+            min-width: 300px;
+          }
+        }
+
+        &__heading {
+          @include _tt-regular;
+          margin-top: 0;
+          margin-bottom: 10px;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          font-size: 16px;
+          line-height: 16px;
+
+          @include _768 {
+            margin-bottom: 4px;
+            font-size: 24px;
+            line-height: 24px;
+          }
+        }
+
+        &__desc {
+          margin-top: 0;
+          margin-bottom: 5px;
+          -webkit-line-clamp: 4;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          font-size: 14px;
+          line-height: 18px;
+          color: $grey-99;
+
+          @include _768 {
+            margin-bottom: 3px;
+            font-size: 16px;
+            line-height: 22px;
+          }
+
+          @include _1024 {
+            margin-bottom: 12px;
+          }
+        }
+
+        &__link {
+          @include _roboto-bold;
+          @include _link-card;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          line-height: 28px;
+          color: $link-primary;
+          fill: $link-primary;
+
+          @include _768 {
+            font-size: 16px;
+          }
+
+          svg {
+            margin-left: 6px;
+            width: 15px;
+            height: 10px;
+
+            @include _768 {
+              margin-left: 3px;
+              width: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    .second {
+      .card-primary {
+        @include _1024 {
+          flex-flow: column nowrap;
+          align-items: start;
+        }
+
+        @include _1224 {
+          flex-flow: row nowrap;
+          align-items: center;
+        }
+
+        &__img {
+          min-height: 172px;
+
+          @include _500 {
+            min-height: 280px;
+          }
+
+          @include _768 {
+            min-height: 172px;
+          }
+
+          @include _1024 {
+            min-width: 100%;
+            min-height: 140px;
+          }
+
+          @include _1224 {
+            min-width: 190px;
+          }
+        }
+
+        &__desc {
+          -webkit-line-clamp: 2;
+        }
+      }
+
+    }
+
+
+    .first {
+      .card1 {
+        .card-primary__img {
+          background-image: url('../img/jpg/s4-1.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-1.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-1.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-1.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/s4-1@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-1@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-1@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-1@2x.jpg');
+          }
+        }
+      }
+
+      .card2 {
+        .card-primary__img {
+          background-image: url('../img/jpg/s4-2.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-2.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-2.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-2.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/s4-2@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-2@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-2@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-2@2x.jpg');
+          }
+        }
+      }
+
+      .card3 {
+        .card-primary__img {
+          background-image: url('../img/jpg/s4-3.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-3.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-3.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-3.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/s4-3@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-3@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-3@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-3@2x.jpg');
+          }
+        }
+      }
+
+      .card4 {
+        .card-primary__img {
+          background-image: url('../img/jpg/s4-4.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-4.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-4.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-4.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/s4-4@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-4@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-4@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-4@2x.jpg');
+          }
+        }
+      }
+
+      .card5 {
+        .card-primary__img {
+          background-image: url('../img/jpg/s4-5.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-5.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-5.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-5.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/s4-5@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-5@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-5@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-5@2x.jpg');
+          }
+        }
+      }
+    }
+
+    .second {
+      .card1 {
+        .card-primary__img {
+          background-image: url('../img/jpg/m4-23.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-23.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-23.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-23.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/m4-23@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-23@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-23@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-23@2x.jpg');
+          }
+        }
+      }
+
+      .card2 {
+        .card-primary__img {
+          background-image: url('../img/jpg/m4-24.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-24.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-24.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-24.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/m4-24@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-24@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-24@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-24@2x.jpg');
+          }
+        }
+      }
+
+      .card3 {
+        .card-primary__img {
+          background-image: url('../img/jpg/m4-25.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-25.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-25.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-25.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/m4-25@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-25@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-25@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-25@2x.jpg');
+          }
+        }
+      }
+
+      .card4 {
+        .card-primary__img {
+          background-image: url('../img/jpg/m4-31.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-31.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-31.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-31.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/m4-31@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-31@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-31@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-31@2x.jpg');
+          }
+        }
+      }
+
+      .card5 {
+        .card-primary__img {
+          background-image: url('../img/jpg/m4-30.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-30.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-30.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-30.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/m4-30@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-30@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-30@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-30@2x.jpg');
+          }
+        }
+      }
+
+      .card6 {
+        .card-primary__img {
+          background-image: url('../img/jpg/m4-32.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-32.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-32.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-32.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/m4-32@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-32@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-32@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-32@2x.jpg');
+          }
+        }
+      }
+
+      .card7 {
+        .card-primary__img {
+          background-image: url('../img/jpg/m4-26.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-26.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-26.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-26.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/m4-26@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-26@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-26@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-26@2x.jpg');
+          }
+        }
+      }
+
+      .card8 {
+        .card-primary__img {
+          background-image: url('../img/jpg/m4-27.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-27.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-27.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-27.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/m4-27@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-27@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-27@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-27@2x.jpg');
+          }
+        }
+      }
+
+      .card9 {
+        .card-primary__img {
+          background-image: url('../img/jpg/m4-28.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-28.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-28.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-28.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/m4-28@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-28@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-28@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-28@2x.jpg');
+          }
+        }
+      }
+
+      .card10 {
+        .card-primary__img {
+          background-image: url('../img/jpg/m4-29.jpg');
+
+          @include _768 {
+            background-image: url('../img/jpg/m4-29.jpg');
+          }
+
+          @include _1024 {
+            background-image: url('../img/jpg/l4-29.jpg');
+          }
+
+          @include _1600 {
+            background-image: url('../img/jpg/xl4-29.jpg');
+          }
+
+          @include _x2 {
+            background-image: url('../img/jpg/m4-29@2x.jpg');
+          }
+
+          @include _768_x2 {
+            background-image: url('../img/jpg/m4-29@2x.jpg');
+          }
+
+          @include _1024_x2 {
+            background-image: url('../img/jpg/l4-29@2x.jpg');
+          }
+
+          @include _1600_x2 {
+            background-image: url('../img/jpg/xl4-29@2x.jpg');
+          }
+        }
+      }
+    }
+  }
+}

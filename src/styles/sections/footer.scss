@@ -1,0 +1,128 @@
+@import 'src/styles/variables_mixins/media';
+@import 'src/styles/variables_mixins/colors';
+@import 'src/styles/variables_mixins/positioning';
+@import 'src/styles/variables_mixins/hover';
+@import 'src/styles/variables_mixins/fonts';
+
+
+.footer {
+  @include _768 {
+    background-color: $primary;
+  }
+
+  &__container {
+    display: flex;
+    flex-flow: column nowrap;
+
+    @include _768 {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding-top: 24px;
+      padding-bottom: 21px;
+    }
+
+    @include _1024 {
+      padding-bottom: 16px;
+    }
+  }
+
+  &__logo {
+    @include _tt-regular;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    order: 2;
+    margin: 0 -21px;
+    padding: 11px 0 12px;
+    font-size: 10px;
+    line-height: 13px;
+    color: $grey-E9;
+    background-color: $grey-4A;
+
+    @include _768 {
+      align-items: start;
+      order: 1;
+      padding: 6px 0 0;
+      margin: 0;
+      font-size: 14px;
+      line-height: 18px;
+      background-color: transparent;
+
+      @include _1600 {
+        padding: 0;
+      }
+    }
+
+    &__link {
+      @include _flex-align-center;
+      width: 112px;
+      height: 26px;
+
+      @include _768 {
+        margin-bottom: 5px;
+        width: 166px;
+        height: 27px;
+      }
+
+      @include _1600 {
+        width: 190px;
+        height: 31px;
+      }
+    }
+
+    &__desc {
+      margin: 0;
+    }
+  }
+
+  &__copy {
+    display: none;
+
+    @include _1024 {
+      display: flex;
+      flex-flow: column nowrap;
+      order: 2;
+      margin: 0 0 0 26px;
+      max-width: 361px;
+      font-size: 16px;
+      line-height: 22px;
+      color: $third;
+
+      span {
+        color: $grey-66;
+      }
+    }
+
+    @include _1600 {
+      margin-left: -18px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    order: 1;
+    margin: 0 -21px;
+    padding: 33px 0 31px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $third;
+    background-color: $primary;
+
+    @include _768 {
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    @include _1024 {
+      order: 3;
+    }
+
+    &__desc {
+      margin: 0;
+      padding: 0 0 8px;
+    }
+  }
+}

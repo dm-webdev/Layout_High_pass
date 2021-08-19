@@ -1,0 +1,23 @@
+@import 'src/styles/variables_mixins/media';
+@import 'src/styles/variables_mixins/colors';
+@import 'src/styles/variables_mixins/positioning';
+@import 'src/styles/variables_mixins/hover';
+@import 'src/styles/variables_mixins/fonts';
+
+
+.main-input {
+  @include _input-main;
+  padding: 10px 23px;
+  border: 1px solid $grey-4A;
+  line-height: 0;
+  color: $secondary;
+  background-color: $grey-4A;
+
+  &::placeholder {
+    color: $third;
+  }
+
+  @include _768 {
+    padding: 14px 23px;
+  }
+}

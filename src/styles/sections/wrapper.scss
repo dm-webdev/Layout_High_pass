@@ -1,0 +1,28 @@
+@import 'src/styles/variables_mixins/media';
+@import 'src/styles/variables_mixins/colors';
+@import 'src/styles/variables_mixins/positioning';
+@import 'src/styles/variables_mixins/hover';
+@import 'src/styles/variables_mixins/fonts';
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 21px;
+  padding-bottom: 50px;
+
+  @include _768 {
+    padding-bottom: 38px;
+  }
+
+  @include _1024 {
+    grid-template-columns: auto 342px;
+    grid-gap: 0 30px;
+    padding-bottom: 39px;
+  }
+
+  @include _1224 {
+    grid-template-columns: auto 410px;
+    padding-bottom: 39px;
+  }
+}

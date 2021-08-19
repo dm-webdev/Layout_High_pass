@@ -1,0 +1,17 @@
+@import 'colors';
+
+
+@mixin _flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin _banner {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  color: $secondary;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $primary;
+}

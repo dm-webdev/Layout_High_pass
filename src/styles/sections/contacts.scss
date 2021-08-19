@@ -1,0 +1,358 @@
+@import 'src/styles/variables_mixins/media';
+@import 'src/styles/variables_mixins/colors';
+@import 'src/styles/variables_mixins/positioning';
+@import 'src/styles/variables_mixins/hover';
+@import 'src/styles/variables_mixins/fonts';
+
+
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 14px;
+  padding-top: 32px;
+  padding-bottom: 50px;
+
+  @include _768 {
+    padding-top: 38px;
+    padding-bottom: 73px;
+  }
+
+  @include _1024 {
+    grid-template-columns: auto 342px;
+    grid-gap: 0 30px;
+    padding-bottom: 70px;
+  }
+
+  @include _1600 {
+    grid-template-columns: auto 410px;
+    padding-top: 45px;
+  }
+
+  &__heading {
+    margin: 0;
+
+    @include _768 {
+      margin-bottom: 8px;
+    }
+
+    @include _1024 {
+      grid-column: 1/ span 2;
+      margin-bottom: 22px;
+    }
+
+    @include _1600 {
+      margin-bottom: 33px;
+    }
+  }
+
+  .map {
+    position: relative;
+    margin-right: -21px;
+    margin-left: -21px;
+    height: 472px;
+    background-image: url('../img/jpg/s6-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include _768 {
+      height: 460px;
+      margin: 0;
+      background-image: url('../img/jpg/m6-1.jpg');
+    }
+
+    @include _1024 {
+      height: 460px;
+    }
+
+    @include _1024 {
+      background-image: url('../img/jpg/l6-1.jpg');
+    }
+
+    @include _1600 {
+      width: 850px;
+      height: 460px;
+      background-image: url('../img/jpg/xl6-1.jpg');
+    }
+
+    @include _x2 {
+      background-image: url('../img/jpg/s6-1@2x.jpg');
+    }
+
+    @include _768_x2 {
+      background-image: url('../img/jpg/m6-1@2x.jpg');
+    }
+
+    @include _1024_x2 {
+      background-image: url('../img/jpg/l6-1@2x.jpg');
+    }
+
+    @include _1600_x2 {
+      background-image: url('../img/jpg/xl6-1@2x.jpg');
+    }
+
+    [class*="ground-pane"] {
+      filter: grayscale(1);
+    }
+
+    [class*="balloon__close-button"] {
+      margin-top: 20px;
+      margin-right: 20px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: $grey-66;
+    }
+
+    [class*="balloon__content"] {
+      background: transparent;
+
+      @include _768 {
+        padding-top: 24px;
+
+        ymaps {
+          width: 470px;
+        }
+      }
+
+      @include _1600 {
+        ymaps {
+          width: 100% !important;
+          height: 90% !important;
+        }
+      }
+    }
+
+    [class*="balloon__tail"] {
+      display: none;
+    }
+
+    [class*="balloon__layout"],
+    [class*="balloon_layout_panel"],
+    .balloon-container {
+      background: rgba(32, 32, 32, 0.85);
+    }
+
+    [class*="balloon-pane"] {
+      right: 0 !important;
+    }
+
+    [class*="balloon__layout"] {
+      @include _1600 {
+        height: 460px;
+      }
+    }
+
+    [class*="balloon-overlay"] {
+      left: 0 !important;
+      top: 472px !important;
+      width: 100% !important;
+
+      @include _1600 {
+        height: 460px !important;
+        top: 0 !important;
+        width: 410px !important;
+      }
+    }
+
+    [class*="balloon_layout_normal"] {
+      top: -155px !important;
+      left: 0 !important;
+      right: 0 !important;
+
+      @include _768 {
+        top: -170px !important;
+      }
+
+      @include _1600 {
+        top: 0 !important;
+        bottom: 0 !important;
+      }
+    }
+
+    [class*="gototaxi"],
+    [class*="gotoymaps"],
+    [class*="gototech"]{
+      display: none;
+    }
+  }
+
+  .feedback {
+    display: flex;
+    flex-flow: column nowrap;
+    padding-top: 8px;
+
+    @include _768 {
+      max-width: 466px;
+    }
+
+    @include _1024 {
+      width: 100%;
+      padding-top: 0px;
+    }
+
+
+    &__heading {
+      @include _tt-regular;
+      margin-top: 0;
+      margin-bottom: 9px;
+      font-size: 18px;
+      line-height: 22px;
+
+      @include _768 {
+        margin-bottom: 7px;
+        font-size: 24px;
+      }
+
+      @include _1024 {
+        margin-top: -10px;
+      }
+    }
+
+    &__desc {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: 18px;
+      color: $grey-99;
+
+      @include _768 {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    label {
+      position: relative;
+      display: flex;
+      flex-flow: column nowrap;
+      margin-bottom: 20px;
+    }
+
+    &__input {
+      @include _input-feedback;
+      padding: 6px 22px;
+
+      @include _768 {
+        padding: 9px 22px;
+      }
+    }
+
+    &__error {
+      @include _roboto-regular;
+      position: absolute;
+      left: 23px;
+      font-size: 9px;
+      line-height: 11px;
+      color: $alert;
+    }
+
+    &__textarea {
+      @include _input-feedback;
+      padding: 12px 22px;
+      min-height: 150px;
+      resize: none;
+
+      @include _768 {
+        padding: 16px 22px;
+      }
+    }
+  }
+}
+
+.map__container {
+  position: absolute;
+  z-index: 5000;
+  top: 315px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px 25px 14px 12px;
+  background-color: rgba(32, 32, 32, 0.85);
+
+  @include _768 {
+    top: 305px;
+    padding: 23px 245px 14px 12px;
+  }
+
+  @include _1024 {
+    padding: 13px 265px 13px 12px;
+  }
+
+  @include _1600 {
+    top: 0;
+    right: 441px;
+    padding: 20px 34px 10px 10px;
+  }
+}
+
+.map__address {
+  padding: 15px 7px;
+  display: flex;
+  flex-flow: column nowrap;
+  font-style: normal;
+
+  @include _768 {
+    padding: 0 0 20px 18px;
+  }
+
+  @include _1600 {
+    justify-content: center;
+    padding: 8px 19px 0 48px;
+    height: 100%;
+  }
+
+  &__heading {
+    @include _tt-regular;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 22px;
+    color: $secondary;
+
+    @include _768 {
+      margin-bottom: 5px;
+      font-size: 24px;
+      line-height: 22px;
+    }
+  }
+
+  &__desc {
+    @include _roboto-regular;
+    margin-top: 0;
+    margin-bottom: 13px;
+    font-size: 14px;
+    line-height: 18px;
+    color: $third;
+
+    @include _768 {
+      margin-bottom: 3px;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+  &__link {
+    @include _flex-align-center;
+    @include _link-primary;
+    @include _tt-medium;
+    color: $link-primary;
+    fill: $link-primary;
+
+    @include _768 {
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    svg {
+      margin-right: 3px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}

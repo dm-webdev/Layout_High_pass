@@ -1,0 +1,66 @@
+@import 'src/styles/variables_mixins/media';
+@import 'src/styles/variables_mixins/colors';
+@import 'src/styles/variables_mixins/positioning';
+@import 'src/styles/variables_mixins/hover';
+@import 'src/styles/variables_mixins/fonts';
+
+
+.social {
+  @include _flex-align-center;
+
+  &__item:not(:last-child) {
+    margin-right: 21px;
+  }
+
+  &__link {
+    @include _link-social;
+    @include _flex-align-center;
+    fill: $third;
+  }
+
+  &__img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.note {
+  @include _roboto-regular;
+  position: absolute;
+  padding: 4px 7px;
+  font-size: 12px;
+  line-height: 14px;
+  background-color: $grey-33;
+
+  @include _768 {
+    padding: 7px 15px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 22px;
+
+  &__img {
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 22px;
+
+  &__img {
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+  }
+}

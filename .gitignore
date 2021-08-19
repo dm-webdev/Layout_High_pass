@@ -1,0 +1,17 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+.idea
+.vscode
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# production
+/build
+/dist
+dist
+node_modules
+.editorconfig

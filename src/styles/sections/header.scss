@@ -1,0 +1,254 @@
+@import 'src/styles/variables_mixins/media';
+@import 'src/styles/variables_mixins/colors';
+@import 'src/styles/variables_mixins/positioning';
+@import 'src/styles/variables_mixins/hover';
+@import 'src/styles/variables_mixins/fonts';
+
+
+.header {
+  &__first-bar {
+    padding: 24px 0 19px;
+    background-color: $primary;
+
+    @include _768 {
+      padding: 20px 0;
+    }
+
+    @include _1600 {
+      padding: 11px 0 20px;
+    }
+  }
+
+  &__wrapper {
+    @include _flex-align-center;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    @include _flex-align-center;
+    flex-shrink: 0;
+
+    @include _768 {
+      padding-left: 2px;
+    }
+
+    @include _1024 {
+      padding-left: 0;
+    }
+
+    &__img {
+      width: 112px;
+      height: 26px;
+
+      @include _768 {
+        width: 166px;
+        height: 40px;
+      }
+
+      @include _1600 {
+        width: 190px;
+        height: 45px;
+      }
+    }
+  }
+
+  &__nav {
+    @include _tt-regular;
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 150%;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    width: 100vw;
+    z-index: 5;
+    color: $secondary;
+    background-color: $primary;
+    transition: right ease-in-out .5s;
+
+    @include _768 {
+      top: 68px;
+      right: 0;
+      left: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+      width: auto;
+      z-index: auto;
+      background-color: inherit;
+
+      &__list {
+        @include _flex-align-center;
+        justify-content: space-between;
+        width: 100%;
+
+        @include _768 {
+          padding: 0 27px;
+        }
+
+        @include _1024 {
+          padding: 0;
+        }
+      }
+
+      &__link {
+        @include _link-primary;
+      }
+    }
+
+    @include _1024 {
+      position: inherit;
+      top: auto;
+      right: auto;
+      left: auto;
+      width: 100%;
+      padding: 0 52px;
+    }
+
+    @include _1600 {
+      padding: 0 88px 0 138px;
+    }
+
+    &__btn {
+      position: absolute;
+      top: 0;
+      right: 20px;
+
+      @include _768 {
+        display: none;
+      }
+    }
+  }
+
+  &__social {
+    display: none;
+
+    @include _1024 {
+      display: flex;
+    }
+  }
+
+  &__search__btn {
+    @include _1024 {
+      display: none;
+    }
+  }
+
+  &__second-bar {
+    padding: 11px 0;
+    background-color: $grey-4A;
+
+    @include _768 {
+      padding: 22px 0;
+    }
+
+    @include _1024 {
+      padding: 5px 0 11px;
+    }
+  }
+
+  &__phone__link {
+    @include _flex-align-center;
+    @include _link-primary;
+    @include _tt-medium;
+    justify-content: space-between;
+    color: $link-primary;
+    fill: $link-primary;
+
+    .header__phone__img {
+      margin-right: 3px;
+      width: 15px;
+      height: 15px;
+    }
+
+    @include _768 {
+      position: absolute;
+      right: 66px;
+      top: -78px;
+      letter-spacing: 0.055em;
+    }
+
+    @include _1024 {
+      position: relative;
+      right: auto;
+      top: auto;
+    }
+
+    @include _1600 {
+      color: $secondary;
+      fill: $secondary;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    padding: 8px 0;
+
+    span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $secondary;
+
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 2px;
+        background-color: inherit;
+      }
+
+      &:after {
+        top: 0;
+        width: 20px;
+      }
+
+      &:before {
+        bottom: 0;
+        width: 10px;
+      }
+    }
+
+    @include _768 {
+      display: none;
+    }
+  }
+
+  &__search-form {
+    display: none;
+
+    @include _1024 {
+      display: flex;
+    }
+
+    &__btn {
+      align-self: flex-end;
+      margin-right: 5px;
+    }
+
+    &__input {
+      @include _input-search;
+      width: 196px;
+      border: none;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: $grey-E9;
+      line-height: 1;
+      background-color: inherit;
+      color: $grey-E9;
+
+      &::placeholder {
+        color: inherit;
+      }
+
+      @include _1600 {
+        font-size: 14px;
+        width: 172px;
+      }
+    }
+  }
+  .nav__active {
+    right: 0;
+  }
+}

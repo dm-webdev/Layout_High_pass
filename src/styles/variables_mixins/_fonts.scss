@@ -1,0 +1,24 @@
+@mixin _tt-regular {
+  font-family: 'TTFirsNeue', sans-serif;
+  font-weight: 400;
+}
+
+@mixin _tt-medium {
+  font-family: 'TTFirsNeue', sans-serif;
+  font-weight: 500;
+}
+
+@mixin _tt-bold {
+  font-family: 'TTFirsNeue', sans-serif;
+  font-weight: 700;
+}
+
+@mixin _roboto-regular {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+@mixin _roboto-bold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}

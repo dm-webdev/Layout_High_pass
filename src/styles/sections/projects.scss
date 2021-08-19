@@ -1,0 +1,867 @@
+@import 'src/styles/variables_mixins/media';
+@import 'src/styles/variables_mixins/colors';
+@import 'src/styles/variables_mixins/positioning';
+@import 'src/styles/variables_mixins/hover';
+@import 'src/styles/variables_mixins/fonts';
+
+
+.projects {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 17px;
+  padding-top: 32px;
+
+  @include _768 {
+    margin-bottom: 26px;
+    padding-top: 39px;
+  }
+
+  @include _1600 {
+    padding-top: 48px;
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    @include _768 {
+      margin-bottom: 14px;
+    }
+
+    @include _1600 {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__slider {
+    height: 2431px;
+
+    @include _500 {
+      height: 3195px;
+    }
+
+    @include _768 {
+      margin-bottom: 52px;
+      height: 1283px;
+    }
+
+    @include _1024 {
+      margin-bottom: 50px;
+      height: 953px;
+    }
+
+    @include _1600 {
+      margin-bottom: 55px;
+      height: 623px;
+    }
+  }
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+
+    &__body {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-gap: 26px 0;
+      width: 200%;
+      transition: left .6s;
+
+      @include _768 {
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 30px;
+        width: calc(200% + 30px);
+      }
+
+      @include _1024 {
+        grid-template-columns: repeat(16, 1fr);
+      }
+
+      @include _1600 {
+        grid-template-columns: repeat(24, 1fr);
+      }
+    }
+
+    .to-right {
+      left: -100%;
+
+      @include _768 {
+        left: calc(-100% - 30px);
+      }
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    right: 21px;
+    display: flex;
+    justify-content: center;
+
+    @include _768 {
+      position: relative;
+      right: auto;
+    }
+
+    &__btn {
+      &:nth-child(1) {
+        margin-right: 10px;
+
+        @include _768 {
+          margin-right: 20px;
+        }
+
+        @include _1024 {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  .single-card {
+    display: flex;
+    flex-flow: column nowrap;
+
+    &__img {
+      position: relative;
+      margin-bottom: 17px;
+      height: 184px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: $primary;
+
+      @include _500 {
+        height: 280px;
+      }
+
+      @include _768 {
+        height: 182px;
+      }
+    }
+
+    &__note {
+      top: 5px;
+      right: 5px;
+      padding: 4px 15px;
+      color: $secondary;
+
+      @include _768 {
+        padding: 6px 16px;
+      }
+    }
+
+    a {
+      @include _link-line-dark;
+    }
+
+    &__heading {
+      @include _roboto-regular;
+      margin-top: 0;
+      margin-bottom: 9px;
+      -webkit-line-clamp: 3;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__date {
+      margin-top: auto;
+      color: $grey-99;
+      fill: $grey-99;
+    }
+  }
+
+  .big-card {
+    @include _banner;
+    padding: 30px;
+    height: 422px;
+
+    @include _500 {
+      height: 600px;
+    }
+
+    @include _768 {
+      height: 300px;
+      padding-top: 20px;
+    }
+
+    @include _1024 {
+      height: 296px;
+    }
+
+    &__note {
+      top: 5px;
+      right: 5px;
+      padding: 4px 15px;
+    }
+
+    &__date {
+      margin-top: auto;
+      margin-bottom: 8px;
+      fill: $secondary;
+
+      @include _768 {
+        margin-top: 0;
+        margin-bottom: 2px;
+      }
+    }
+
+    &__heading {
+      @include _tt-bold;
+      margin-top: 0;
+      margin-bottom: 9px;
+      font-size: 24px;
+      line-height: 24px;
+
+      @include _768 {
+        margin-bottom: 7px;
+        max-width: 40%;
+      }
+    }
+
+    &__desc {
+      @include _roboto-regular;
+      margin-top: 0;
+      margin-bottom: 23px;
+      font-size: 14px;
+      line-height: 18px;
+
+      @include _768 {
+        max-width: 45%;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      @include _1024 {
+        max-width: 55%;
+      }
+    }
+
+    &__link {
+      @include _768 {
+        margin-top: auto;
+      }
+    }
+  }
+
+  &__slider {
+    &__1 {
+      .single-card__img {
+        background-image: url('../img/jpg/s3-1.jpg');
+
+        @include _768 {
+          background-image: url('../img/jpg/m3-1.jpg');
+        }
+
+        @include _1024 {
+          background-image: url('../img/jpg/l3-1.jpg');
+        }
+
+        @include _1600 {
+          background-image: url('../img/jpg/xl3-1.jpg');
+        }
+
+        @include _x2 {
+          background-image: url('../img/jpg/s3-1@2x.jpg');
+        }
+
+        @include _768_x2 {
+          background-image: url('../img/jpg/m3-1@2x.jpg');
+        }
+
+        @include _1024_x2 {
+          background-image: url('../img/jpg/l3-1@2x.jpg');
+        }
+
+        @include _1600_x2 {
+          background-image: url('../img/jpg/xl3-1@2x.jpg');
+        }
+      }
+
+      @include _768 {
+        order: 1;
+        grid-column: 1/ span 2;
+      }
+    }
+
+    &__2 {
+      .single-card__img {
+        background-image: url('../img/jpg/s3-8.jpg');
+
+        @include _768 {
+          background-image: url('../img/jpg/m3-8.jpg');
+        }
+
+        @include _1024 {
+          background-image: url('../img/jpg/l3-8.jpg');
+        }
+
+        @include _1600 {
+          background-image: url('../img/jpg/xl3-8.jpg');
+        }
+
+        @include _x2 {
+          background-image: url('../img/jpg/s3-8@2x.jpg');
+        }
+
+        @include _768_x2 {
+          background-image: url('../img/jpg/m3-8@2x.jpg');
+        }
+
+        @include _1024_x2 {
+          background-image: url('../img/jpg/l3-8@2x.jpg');
+        }
+
+        @include _1600_x2 {
+          background-image: url('../img/jpg/xl3-8@2x.jpg');
+        }
+      }
+
+      @include _768 {
+        order: 4;
+        grid-column: 7/ span 2;
+      }
+
+      @include _1600 {
+        order: 11;
+        grid-column: 13/span 2;
+      }
+    }
+
+    &__3 {
+      .single-card__img {
+        background-image: url('../img/jpg/s3-2.jpg');
+
+        @include _768 {
+          background-image: url('../img/jpg/m3-2.jpg');
+        }
+
+        @include _1024 {
+          background-image: url('../img/jpg/l3-2.jpg');
+        }
+
+        @include _1600 {
+          background-image: url('../img/jpg/xl3-2.jpg');
+        }
+
+        @include _x2 {
+          background-image: url('../img/jpg/s3-2@2x.jpg');
+        }
+
+        @include _768_x2 {
+          background-image: url('../img/jpg/m3-2@2x.jpg');
+        }
+
+        @include _1024_x2 {
+          background-image: url('../img/jpg/l3-2@2x.jpg');
+        }
+
+        @include _1600_x2 {
+          background-image: url('../img/jpg/xl3-2@2x.jpg');
+        }
+      }
+
+      @include _768 {
+        order: 2;
+        grid-column: 3/ span 2;
+      }
+    }
+
+    &__4 {
+      .single-card__img {
+        background-image: url('../img/jpg/s3-9.jpg');
+
+        @include _768 {
+          background-image: url('../img/jpg/m3-9.jpg');
+        }
+
+        @include _1024 {
+          background-image: url('../img/jpg/l3-9.jpg');
+        }
+
+        @include _1600 {
+          background-image: url('../img/jpg/xl3-9.jpg');
+        }
+
+        @include _x2 {
+          background-image: url('../img/jpg/s3-9@2x.jpg');
+        }
+
+        @include _768_x2 {
+          background-image: url('../img/jpg/m3-9@2x.jpg');
+        }
+
+        @include _1024_x2 {
+          background-image: url('../img/jpg/l3-9@2x.jpg');
+        }
+
+        @include _1600_x2 {
+          background-image: url('../img/jpg/xl3-9@2x.jpg');
+        }
+      }
+
+      @include _768 {
+        order: 5;
+        grid-column: 9/ span 2;
+      }
+
+      @include _1024 {
+        order: 13;
+      }
+
+      @include _1600 {
+        order: 12;
+        grid-column: 15/span 2;
+      }
+    }
+
+    &__5 {
+      .single-card__img {
+        background-image: url('../img/jpg/s3-3.jpg');
+
+        @include _768 {
+          background-image: url('../img/jpg/m3-3.jpg');
+        }
+
+        @include _1024 {
+          background-image: url('../img/jpg/l3-3.jpg');
+        }
+
+        @include _1600 {
+          background-image: url('../img/jpg/xl3-3.jpg');
+        }
+
+        @include _x2 {
+          background-image: url('../img/jpg/s3-3@2x.jpg');
+        }
+
+        @include _768_x2 {
+          background-image: url('../img/jpg/m3-3@2x.jpg');
+        }
+
+        @include _1024_x2 {
+          background-image: url('../img/jpg/l3-3@2x.jpg');
+        }
+
+        @include _1600_x2 {
+          background-image: url('../img/jpg/xl3-3@2x.jpg');
+        }
+      }
+
+      @include _768 {
+        order: 3;
+        grid-column: 5/ span 2;
+      }
+    }
+
+    &__6 {
+      .single-card__img {
+        background-image: url('../img/jpg/s3-10.jpg');
+
+        @include _768 {
+          background-image: url('../img/jpg/m3-10.jpg');
+        }
+
+        @include _1024 {
+          background-image: url('../img/jpg/l3-10.jpg');
+        }
+
+        @include _1600 {
+          background-image: url('../img/jpg/xl3-10.jpg');
+        }
+
+        @include _x2 {
+          background-image: url('../img/jpg/s3-10@2x.jpg');
+        }
+
+        @include _768_x2 {
+          background-image: url('../img/jpg/m3-10@2x.jpg');
+        }
+
+        @include _1024_x2 {
+          background-image: url('../img/jpg/l3-10@2x.jpg');
+        }
+
+        @include _1600_x2 {
+          background-image: url('../img/jpg/xl3-10@2x.jpg');
+        }
+      }
+
+      @include _768 {
+        order: 6;
+        grid-column: 11/ span 2;
+      }
+
+      @include _1024 {
+        order: 14;
+      }
+
+      @include _1600 {
+        order: 13;
+        grid-column: 17/span 2;
+      }
+    }
+
+    &__9 {
+      .single-card__img {
+        background-image: url('../img/jpg/s3-5.jpg');
+
+        @include _768 {
+          background-image: url('../img/jpg/m3-5.jpg');
+        }
+
+        @include _1024 {
+          background-image: url('../img/jpg/l3-5.jpg');
+        }
+
+        @include _1600 {
+          background-image: url('../img/jpg/xl3-5.jpg');
+        }
+
+        @include _x2 {
+          background-image: url('../img/jpg/s3-5@2x.jpg');
+        }
+
+        @include _768_x2 {
+          background-image: url('../img/jpg/m3-5@2x.jpg');
+        }
+
+        @include _1024_x2 {
+          background-image: url('../img/jpg/l3-5@2x.jpg');
+        }
+
+        @include _1600_x2 {
+          background-image: url('../img/jpg/xl3-5@2x.jpg');
+        }
+      }
+
+      @include _768 {
+        order: 9;
+        grid-column: 1/ span 3;
+      }
+
+      @include _1024 {
+        order: 8;
+        grid-column: 6/ span 3;
+      }
+
+      @include _1600 {
+        order: 9;
+        grid-column: 7/span 3;
+      }
+    }
+
+    &__10 {
+      .single-card__img {
+        background-image: url('../img/jpg/s3-12.jpg');
+
+        @include _768 {
+          background-image: url('../img/jpg/m3-12.jpg');
+        }
+
+        @include _1024 {
+          background-image: url('../img/jpg/l3-12.jpg');
+        }
+
+        @include _1600 {
+          background-image: url('../img/jpg/xl3-12.jpg');
+        }
+
+        @include _x2 {
+          background-image: url('../img/jpg/s3-12@2x.jpg');
+        }
+
+        @include _768_x2 {
+          background-image: url('../img/jpg/m3-12@2x.jpg');
+        }
+
+        @include _1024_x2 {
+          background-image: url('../img/jpg/l3-12@2x.jpg');
+        }
+
+        @include _1600_x2 {
+          background-image: url('../img/jpg/xl3-12@2x.jpg');
+        }
+      }
+
+      @include _768 {
+        order: 11;
+        grid-column: 7/ span 3;
+      }
+
+      @include _1024 {
+        order: 6;
+        grid-column: 14/ span 3;
+      }
+
+      @include _1600 {
+        order: 6;
+        grid-column: 19/span 3;
+      }
+    }
+
+    &__11 {
+      .single-card__img {
+        background-image: url('../img/jpg/s3-6.jpg');
+
+        @include _768 {
+          background-image: url('../img/jpg/m3-6.jpg');
+        }
+
+        @include _1024 {
+          background-image: url('../img/jpg/l3-6.jpg');
+        }
+
+        @include _1600 {
+          background-image: url('../img/jpg/xl3-6.jpg');
+        }
+
+        @include _x2 {
+          background-image: url('../img/jpg/s3-6@2x.jpg');
+        }
+
+        @include _768_x2 {
+          background-image: url('../img/jpg/m3-6@2x.jpg');
+        }
+
+        @include _1024_x2 {
+          background-image: url('../img/jpg/l3-6@2x.jpg');
+        }
+
+        @include _1600_x2 {
+          background-image: url('../img/jpg/xl3-6@2x.jpg');
+        }
+      }
+
+      @include _768 {
+        order: 10;
+        grid-column: 4/ span 3;
+      }
+
+      @include _1024 {
+        order: 11;
+        grid-column: 1/ span 3;
+      }
+
+      @include _1600 {
+        order: 10;
+        grid-column: 10/span 3;
+      }
+    }
+
+    &__12 {
+      .single-card__img {
+        background-image: url('../img/jpg/s3-13.jpg');
+
+        @include _768 {
+          background-image: url('../img/jpg/m3-13.jpg');
+        }
+
+        @include _1024 {
+          background-image: url('../img/jpg/l3-13.jpg');
+        }
+
+        @include _1600 {
+          background-image: url('../img/jpg/xl3-13.jpg');
+        }
+
+        @include _x2 {
+          background-image: url('../img/jpg/s3-13@2x.jpg');
+        }
+
+        @include _768_x2 {
+          background-image: url('../img/jpg/m3-13@2x.jpg');
+        }
+
+        @include _1024_x2 {
+          background-image: url('../img/jpg/l3-13@2x.jpg');
+        }
+
+        @include _1600_x2 {
+          background-image: url('../img/jpg/xl3-13@2x.jpg');
+        }
+      }
+
+      @include _768 {
+        order: 12;
+        grid-column: 10/ span 3;
+      }
+
+      @include _1024 {
+        order: 9;
+        grid-column: 9/ span 3;
+      }
+
+      @include _1600 {
+        order: 7;
+        grid-column: 22/span 3;
+      }
+    }
+  }
+
+  &__slider__7 {
+    background-image: url('../img/jpg/s3-4.jpg');
+
+    @include _768 {
+      order: 7;
+      grid-column: 1/span 6;
+      background-image: url('../img/jpg/m3-4.jpg');
+    }
+
+    @include _1024 {
+      grid-column: 1/span 5;
+      background-image: url('../img/jpg/l3-4.jpg');
+    }
+
+    @include _1600 {
+      order: 4;
+      grid-column: 7/span 6;
+      background-image: url('../img/jpg/xl3-4.jpg');
+    }
+
+    @include _x2 {
+      background-image: url('../img/jpg/s3-4@2x.jpg');
+    }
+
+    @include _768_x2 {
+      background-image: url('../img/jpg/m3-4@2x.jpg');
+    }
+
+    @include _1024_x2 {
+      background-image: url('../img/jpg/l3-4@2x.jpg');
+    }
+
+    @include _1600_x2 {
+      background-image: url('../img/jpg/xl3-4@2x.jpg');
+    }
+  }
+
+  &__slider__8 {
+    background-image: url('../img/jpg/s3-11.jpg');
+
+    @include _768 {
+      order: 8;
+      grid-column: 7/span 6;
+      background-image: url('../img/jpg/m3-11.jpg');
+    }
+
+    @include _1024 {
+      order: 5;
+      grid-column: 9/span 5;
+      background-image: url('../img/jpg/l3-11.jpg');
+    }
+
+    @include _1600 {
+      grid-column: 13/span 6;
+      background-image: url('../img/jpg/xl3-11.jpg');
+    }
+
+    @include _x2 {
+      background-image: url('../img/jpg/s3-11@2x.jpg');
+    }
+
+    @include _768_x2 {
+      background-image: url('../img/jpg/m3-11@2x.jpg');
+    }
+
+    @include _1024_x2 {
+      background-image: url('../img/jpg/l3-11@2x.jpg');
+    }
+
+    @include _1600_x2 {
+      background-image: url('../img/jpg/xl3-11@2x.jpg');
+    }
+  }
+
+  &__slider__13 {
+    background-image: url('../img/jpg/s3-7.jpg');
+
+    @include _768 {
+      order: 13;
+      grid-column: 1/span 6;
+      background-image: url('../img/jpg/m3-7.jpg');
+    }
+
+    @include _1024 {
+      order: 12;
+      grid-column: 4/span 5;
+      background-image: url('../img/jpg/l3-7.jpg');
+    }
+
+    @include _1600 {
+      order: 8;
+      grid-column: 1/span 6;
+      background-image: url('../img/jpg/xl3-7.jpg');
+    }
+
+    @include _x2 {
+      background-image: url('../img/jpg/s3-7@2x.jpg');
+    }
+
+    @include _768_x2 {
+      background-image: url('../img/jpg/m3-7@2x.jpg');
+    }
+
+    @include _1024_x2 {
+      background-image: url('../img/jpg/l3-7@2x.jpg');
+    }
+
+    @include _1600_x2 {
+      background-image: url('../img/jpg/xl3-7@2x.jpg');
+    }
+
+    .big-card__note {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__slider__14 {
+    background-image: url('../img/jpg/s3-14.jpg');
+
+    @include _768 {
+      order: 14;
+      grid-column: 7/span 6;
+      background-image: url('../img/jpg/m3-14.jpg');
+    }
+
+    @include _1024 {
+      order: 10;
+      grid-column: 12/span 5;
+      background-image: url('../img/jpg/l3-14.jpg');
+    }
+
+    @include _1600 {
+      order: 14;
+      grid-column: 19/span 6;
+      background-image: url('../img/jpg/xl3-14.jpg');
+    }
+
+    @include _x2 {
+      background-image: url('../img/jpg/s3-14@2x.jpg');
+    }
+
+    @include _768_x2 {
+      background-image: url('../img/jpg/m3-14@2x.jpg');
+    }
+
+    @include _1024_x2 {
+      background-image: url('../img/jpg/l3-14@2x.jpg');
+    }
+
+    @include _1600_x2 {
+      background-image: url('../img/jpg/xl3-14@2x.jpg');
+    }
+
+    .big-card__note {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

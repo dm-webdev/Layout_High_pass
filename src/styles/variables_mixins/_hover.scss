@@ -1,0 +1,294 @@
+@import 'colors';
+
+@mixin _link-primary {
+  outline: none;
+  transition: color .3s, background-color 0.3s, fill .3s;
+
+  &:hover {
+    color: $link-primary;
+    fill: $link-primary;
+  }
+
+  &:focus {
+    background-color: $link-secondary;
+    color: $secondary;
+    fill: $secondary;
+  }
+
+  &:active {
+    color: $link-third;
+    fill: $link-third;
+  }
+}
+
+@mixin _link-line-dark {
+  outline: none;
+  text-decoration: none;
+  color: $primary;
+  transition: color .3s, background-color 0.3s;
+
+  &:hover {
+    color: $link-primary;
+  }
+
+  &:focus {
+    background-color: $link-background;
+    color: $primary;
+  }
+
+  &:active {
+    color: $link-third;
+  }
+}
+
+@mixin _link-line-light {
+  outline: none;
+  text-decoration: none;
+  color: $secondary;
+  transition: color .3s, background-color 0.3s;
+
+  &:hover {
+    color: $link-primary;
+  }
+
+  &:focus {
+    background-color: $link-background;
+    color: $secondary;
+  }
+
+  &:active {
+    color: $link-third;
+  }
+}
+
+@mixin _link-social {
+  outline: none;
+  transition: fill .3s;
+
+  &:hover {
+    fill: $link-primary;
+  }
+
+  &:focus {
+    fill: $link-secondary;
+  }
+
+  &:active {
+    fill: $link-third;
+  }
+}
+
+@mixin _input-search {
+  outline: none;
+  cursor: text;
+  transition: border-bottom-color .3s;
+
+  &:hover {
+    border-bottom-color: $link-primary;
+  }
+
+  &:focus {
+    border-bottom-color: $link-secondary
+  }
+
+  &:active {
+    border-bottom-color: $link-third;
+  }
+}
+
+@mixin _btn-filled {
+  outline: none;
+  transition: border-color .3s, background-color 0.3s;
+
+  &:hover {
+    border-color: $link-secondary;
+    background-color: $link-secondary;
+  }
+
+  &:focus {
+    border-color: $link-third;
+    background-color: $link-primary;
+  }
+
+  &:active {
+    border-color: $link-third;
+    background-color: $link-third;
+  }
+}
+
+@mixin _input-main {
+  outline: none;
+  cursor: text;
+  transition: border-bottom-color .3s;
+
+  &:hover::placeholder {
+    color: $link-primary;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $link-third;
+  }
+}
+
+@mixin _btn-slider {
+  outline: none;
+  transition: color .3s, background-color 0.3s;
+
+  &:hover {
+    color: $link-primary;
+    background-color: $grey-E9;
+  }
+
+  &:focus {
+    border-color: $slider;
+    background-color: $link-background;
+  }
+
+  &:active {
+    color: $secondary;
+    background-color: $link-primary;
+  }
+}
+
+@mixin _btn-slider__active {
+  outline: none;
+  transition: color .3s, background-color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $secondary;
+    background-color: $link-primary;
+  }
+
+  &:active {
+    color: $slider;
+    background-color: $grey-C4;
+  }
+}
+
+@mixin _btn-empty {
+  outline: none;
+  transition: border-color .3s, background-color 0.3s;
+
+  &:hover {
+    background-color: $link-primary;
+  }
+
+  &:focus {
+    border-color: $link-primary;
+    background-color: $link-secondary;
+  }
+
+  &:active {
+    border-color: $link-third;
+    background-color: $link-third;
+  }
+}
+
+@mixin _btn-tabs {
+  outline: none;
+  transition: border-color .3s, background-color 0.3s, color 0.3s;
+
+  &:hover {
+    color: $link-primary;
+  }
+
+  &:focus {
+    border-bottom-color: $grey-C4;
+    background-color: $link-background;
+  }
+
+  &:active {
+    color: $link-primary;
+    border-bottom-color: $link-primary;
+  }
+}
+
+@mixin _btn-tabs-active {
+  outline: none;
+  transition: border-color .3s, background-color 0.3s, color 0.3s;
+
+  &:hover,
+  &:active {
+    color: $link-primary;
+    border-bottom-color: $link-primary;
+  }
+
+  &:active {
+    color: $grey-66;
+    border-bottom-color: $grey-C4;
+  }
+}
+
+@mixin _link-card {
+  outline: none;
+  transition: color .3s, background-color 0.3s, fill .3s;
+
+  svg {
+    transition: transform .3s;
+    transform-origin: left;
+  }
+
+  &:hover {
+    svg {
+      transform: scaleX(1.5);
+    }
+  }
+
+  &:focus {
+    background-color: $link-background;
+
+    svg {
+      transform: scaleX(1.5);
+    }
+  }
+
+  &:active {
+    color: $link-third;
+    fill: $link-third;
+  }
+}
+
+@mixin _input-feedback {
+  outline: none;
+  border: 1px solid $grey-E9;
+  color: $primary;
+  background-color: $grey-E9;
+  transition: color .3s, background-color 0.3s, fill .3s;
+
+  &::placeholder {
+    color: $grey-99;
+  }
+
+  &:hover {
+    &::placeholder {
+      color: $link-primary;
+    }
+  }
+
+  &:focus {
+    border-color: $link-primary;
+
+    &::placeholder {
+      color: $grey-99;
+    }
+  }
+}
+
+@mixin _btn-close {
+  outline: none;
+  fill: $secondary;
+  transition: fill .3s, background-color 0.3s;
+
+  &:focus,
+  &:hover {
+    fill: $link-primary;
+    background-color: $grey-99;
+  }
+
+  &:active {
+    fill: $link-third;
+    background-color: $grey-66;
+  }
+}

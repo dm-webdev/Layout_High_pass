@@ -1,0 +1,24 @@
+/*special styles*/
+@import 'common/_normalize.css';
+
+/*common stiles*/
+@import 'common/fonts.scss';
+@import 'common/main.scss';
+
+/*reusable*/
+@import 'reusable/misc.scss';
+@import 'reusable/buttons.scss';
+@import 'reusable/typography.scss';
+@import 'reusable/controls.scss';
+
+/*sections*/
+@import 'sections/header.scss';
+@import 'sections/hero.scss';
+@import 'sections/about.scss';
+@import 'sections/projects.scss';
+@import 'sections/wrapper.scss';
+@import 'sections/aside.scss';
+@import 'sections/to-do.scss';
+@import 'sections/classes.scss';
+@import 'sections/contacts.scss';
+@import 'sections/footer.scss';

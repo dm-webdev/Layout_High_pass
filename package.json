@@ -1,0 +1,52 @@
+{
+  "name": "skillbox-gulp",
+  "version": "1.0.0",
+  "description": "home work",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=developement gulp",
+    "build": "cross-env NODE_ENV=production gulp build"
+  },
+  "keywords": [
+    "gulp",
+    "html",
+    "js",
+    "gulp"
+  ],
+  "author": "Denis Mironenko denis.mironenko@mail.ru",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "autoprefixer": "^10.2.6",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "cross-env": "^7.0.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-image": "^6.2.1",
+    "gulp-notify": "^4.0.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.3.2",
+    "sass": "^1.35.2"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
+  "dependencies": {
+    "gulp-flatten": "^0.4.0"
+  }
+}

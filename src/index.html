@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>High-pass</title>
+
+  <meta name="description" content="Добро пожаловать на персональную страницу фотостудии High-pass">
+  <meta name="keywords" content="High-pass, фотостудия, фотография, искусство, дизайн">
+
+  <link rel="shortcut icon" href="./img/icons/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="styles/fonts/roboto-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="styles/fonts/roboto-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="styles/fonts/ttfirsneue-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="styles/fonts/ttfirsneue-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="styles/fonts/ttfirsneue-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles/index.css">
+
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__first-bar">
+      <div class="container header__wrapper">
+        <a href="#" class="header__logo">
+          <img class="header__logo__img" src="sprite.svg#logo" alt="Логотип компании">
+        </a>
+
+        <nav class="header__nav">
+          <ul class="header__nav__list">
+            <li class="header__nav__item">
+              <a href="#about" class="header__nav__link">О студии</a>
+            </li>
+            <li class="header__nav__item">
+              <a href="#projects" class="header__nav__link">Наши проекты</a>
+            </li>
+            <li class="header__nav__item">
+              <a href="#to-do" class="header__nav__link">Услуги</a>
+            </li>
+            <li class="header__nav__item">
+              <a href="#classes" class="header__nav__link">Мастер-классы</a>
+            </li>
+            <li class="header__nav__item">
+              <a href="#contacts" class="header__nav__link">Контакты</a>
+            </li>
+          </ul>
+
+          <button class="header__nav__btn close-btn" type="button" aria-label="скрыть адрес">
+            <svg class="header__phone__img">
+              <use xlink:href="sprite.svg#close"></use>
+            </svg>
+          </button>
+        </nav>
+
+        <ul class="social header__social">
+          <li class="social__item">
+            <a href="3" class="social__link" rel="noreferrer noopener">
+              <svg class="social__img">
+                <use xlink:href="sprite.svg#insta "></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="3" class="social__link" rel="noreferrer noopener">
+              <svg class="social__img">
+                <use xlink:href="sprite.svg#fb "></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="3" class="social__link" rel="noreferrer noopener">
+              <svg class="social__img">
+                <use xlink:href="sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+
+        <button class="header__search__btn search-btn" type="button" aria-label="открыть поиск по сайту">
+          <svg class="search-btn__img">
+            <use xlink:href="sprite.svg#search"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="header__second-bar">
+      <div class="container header__wrapper">
+        <button class="header__burger" type="button" aria-label="открыть мобильное меню">
+          <span></span>
+        </button>
+
+        <a href="tel:+749542423532" class="header__phone__link"  target="_blank" rel="noreferrer noopener">
+          <svg class="header__phone__img">
+            <use xlink:href="sprite.svg#phone"></use>
+          </svg>
+          +7 (495) 42-423-532
+        </a>
+        <form class="header__search-form">
+          <button class="header__search-form__btn search-btn" type="submit" aria-label="искать">
+            <svg class="search-btn__img">
+              <use xlink:href="sprite.svg#search"></use>
+            </svg>
+          </button>
+
+          <input class="header__search-form__input" type="text" name="search" placeholder="Что будем иcкать?" aria-label="Введите фразу для поиска">
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">фотостудия High pass</h1>
+
+    <section class="hero container">
+      <div class="hero__banner">
+        <p class="hero__banner__desc">Мастер-класс от Игоря Робова</p>
+
+        <h3 class="hero__banner__heading">
+          Неоновый фотосет 2.0
+          <span class="hero__banner__datetime">7 июля 20:00</span>
+        </h3>
+
+        <a href="#" class="hero__banner__link bth-filled">Узнать больше</a>
+
+        <div class="hero__banner__note note">#мастеркласс</div>
+      </div>
+      <div class="hero__gallery">
+        <h2 class="hero__gallery__heading">Работы участников предыдущего мастер-класса</h2>
+
+        <div class="hero__gallery__container">
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl1-3.webp 1x, img/webp/xl1-3@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l1-3.webp 1x, img/webp/l1-3@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m1-3.webp 1x, img/webp/m1-3@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s1-3.webp 1x, img/webp/s1-3@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl1-3.jpg 1x, img/jpg/xl1-3@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l1-3.jpg 1x, img/jpg/l1-3@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m1-3.jpg 1x, img/jpg/m1-3@2x.jpg 2x">
+
+            <img src="img/jpg/s1-3.jpg" srcset="img/jpg/s1-3@2x.jpg 2x" alt="Первая работа участника мастер-класса" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl1-4.webp 1x, img/webp/xl1-4@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l1-4.webp 1x, img/webp/l1-4@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m1-4.webp 1x, img/webp/m1-4@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s1-4.webp 1x, img/webp/s1-4@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl1-4.jpg 1x, img/jpg/xl1-4@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l1-4.jpg 1x, img/jpg/l1-4@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m1-4.jpg 1x, img/jpg/m1-4@2x.jpg 2x">
+
+            <img src="img/jpg/s1-4.jpg" srcset="img/jpg/s1-4@2x.jpg 2x" alt="Первая работа участника мастер-класса" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl1-2.webp 1x, img/webp/xl1-2@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l1-2.webp 1x, img/webp/l1-2@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m1-2.webp 1x, img/webp/m1-2@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s1-2.webp 1x, img/webp/s1-2@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl1-2.jpg 1x, img/jpg/xl1-2@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l1-2.jpg 1x, img/jpg/l1-2@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m1-2.jpg 1x, img/jpg/m1-2@2x.jpg 2x">
+
+            <img src="img/jpg/s1-2.jpg" srcset="img/jpg/s1-2@2x.jpg 2x" alt="Первая работа участника мастер-класса" />
+          </picture>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about">
+      <div class="about__container container">
+        <div class="about__desc">
+          <h2 class="about__desc__heading section-heading">О студии</h2>
+
+          <p class="about__desc__text">В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы, инициированные исключительно синтетически, ограничены исключительно образом мышления. Предварительные выводы неутешительны: высокотехнологичная концепция общественного уклада требует от&nbsp;нас анализа соответствующих условий активизации! Следует отметить, что семантический разбор внешних противодействий фиксирует необходимость распределения внутренних резервов и&nbsp;ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения предполагает независимые способы реализации новых принципов формирования материально-технической и&nbsp;кадровой базы. Приятно, граждане, наблюдать, как явные признаки институционализации являются только методом политического участия и&nbsp;нарушающими общечеловеческие нормы этики.</p>
+        </div>
+        <form class="about__form">
+          <div class="about__form__img"></div>
+
+          <h3 class="about__form__heading">Подписаться на рассылку</h3>
+
+          <input type="text" class="about__form__input main-input" placeholder="E-mail">
+
+          <button type="submit" class="about__form__btn bth-filled">Отправить</button>
+        </form>
+      </div>
+    </section>
+    <section id="projects" class="projects container">
+      <h2 class="projects__heading section-heading">Наши проекты</h2>
+
+      <div class="projects__slider slider">
+        <div class="projects__slider__body slider__body">
+          <article class="single-card projects__slider__1">
+            <div class="single-card__img">
+              <div class="single-card__note note">#пейзаж</div>
+            </div>
+
+            <a href="#">
+              <h3 class="single-card__heading">Синтетически, смешаны с не уникальными данными до степени...</h3>
+            </a>
+
+            <div class="single-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              16 июня
+            </div>
+          </article>
+
+          <article class="single-card projects__slider__2">
+            <div class="single-card__img">
+              <div class="single-card__note note">#пейзаж</div>
+            </div>
+
+            <a href="#">
+              <h3 class="single-card__heading">Равным образом, сложившаяся структура организации...</h3>
+            </a>
+
+            <div class="single-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              15 февраля
+            </div>
+          </article>
+
+          <article class="single-card projects__slider__3">
+            <div class="single-card__img">
+              <div class="single-card__note note">#портрет</div>
+            </div>
+
+            <a href="#">
+              <h3 class="single-card__heading">В своём стремлении улучшить опыт мы упускаем, что явные...</h3>
+            </a>
+
+            <div class="single-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              28 мая
+            </div>
+          </article>
+
+          <article class="single-card projects__slider__4">
+            <div class="single-card__img">
+              <div class="single-card__note note">#предмет</div>
+            </div>
+
+            <a href="#">
+              <h3 class="single-card__heading">Безусловно, реализация намеченных обеспечивает...</h3>
+            </a>
+
+            <div class="single-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              10 февраля
+            </div>
+          </article>
+
+          <article class="single-card projects__slider__5">
+            <div class="single-card__img">
+              <div class="single-card__note note">#предмет</div>
+            </div>
+
+            <a href="#">
+              <h3 class="single-card__heading">Равным образом, высокое качество позиционных...</h3>
+            </a>
+
+            <div class="single-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              14 мая
+            </div>
+          </article>
+
+          <article class="single-card projects__slider__6">
+            <div class="single-card__img">
+              <div class="single-card__note note">#пейзаж</div>
+            </div>
+
+            <a href="#">
+              <h3 class="single-card__heading">Безусловно, курс на социальный национальный...</h3>
+            </a>
+
+            <div class="single-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              7 февраля
+            </div>
+          </article>
+
+          <article class="big-card projects__slider__7">
+            <div class="big-card__note note">#fuji</div>
+
+            <div class="big-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              9 апреля
+            </div>
+
+            <h3 class="big-card__heading">Cемантический разбор</h3>
+
+            <p class="big-card__desc">В рамках спецификации современных стандартов, интерактивные прототипы</p>
+
+            <a href="#" class="big-card__link empty-btn">О проекте</a>
+          </article>
+
+          <article class="big-card projects__slider__8">
+            <div class="big-card__note note">#портрет</div>
+
+            <div class="big-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              24 февраля
+            </div>
+
+            <h3 class="big-card__heading">Спорная точка зрения</h3>
+
+            <p class="big-card__desc">Ясность нашей позиции очевидна: убеждённость некоторых оппонентов</p>
+
+            <a href="#" class="big-card__link empty-btn">О проекте</a>
+          </article>
+
+          <article class="single-card projects__slider__9">
+            <div class="single-card__img">
+              <div class="single-card__note note">#ретушь</div>
+            </div>
+
+            <a href="#">
+              <h3 class="single-card__heading">Как принято считать, многие известные личности и по сей день остаются уделом либералов...</h3>
+            </a>
+
+            <div class="single-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              28 мая
+            </div>
+          </article>
+
+          <article class="single-card projects__slider__10">
+            <div class="single-card__img">
+              <div class="single-card__note note">#ретушь</div>
+            </div>
+
+            <a href="#">
+              <h3 class="single-card__heading">Идейные соображения высшего порядка, а также убеждённость некоторых оппонентов...</h3>
+            </a>
+
+            <div class="single-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              20 февраля
+            </div>
+          </article>
+
+          <article class="single-card projects__slider__11">
+            <div class="single-card__img">
+              <div class="single-card__note note">#портрет</div>
+            </div>
+
+            <a href="#">
+              <h3 class="single-card__heading">С учётом сложившейся международной обстановки, новая модель организационной...</h3>
+            </a>
+
+            <div class="single-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              14 мая
+            </div>
+          </article>
+
+          <article class="single-card projects__slider__12">
+            <div class="single-card__img">
+              <div class="single-card__note note">#портрет</div>
+            </div>
+
+            <a href="#">
+              <h3 class="single-card__heading">Прежде всего, повышение уровня гражданского сознания говорит о возможностях приоритизации...</h3>
+            </a>
+
+            <div class="single-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              18 февраля
+            </div>
+          </article>
+
+          <article class="big-card projects__slider__13">
+            <div class="big-card__note note">#проектзабвение</div>
+
+            <div class="big-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              20 марта
+            </div>
+
+            <h3 class="big-card__heading">Забвение</h3>
+
+            <p class="big-card__desc">Играет важную роль в формировании глубокомысленных рассуждений</p>
+
+            <a href="#" class="big-card__link empty-btn">О проекте</a>
+          </article>
+
+          <article class="big-card projects__slider__14">
+            <div class="big-card__note note">#проектджаз</div>
+
+            <div class="big-card__date date">
+              <svg class="date__img">
+                <use xlink:href="sprite.svg#calendar"></use>
+              </svg>
+              2 февраля
+            </div>
+
+            <h3 class="big-card__heading">Задания по разработке своевременного</h3>
+
+            <p class="big-card__desc">Повседневная практика показывает, что сложившаяся структура организации играет важную роль</p>
+
+            <a href="#" class="big-card__link empty-btn">О проекте</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="projects__controls">
+        <button type="button" class="projects__controls__btn slider-control slider-control-active">1</button>
+
+        <button type="button" class="projects__controls__btn slider-control">2</button>
+      </div>
+    </section>
+    <div id="to-do" class="container wrapper">
+      <section class="to-do">
+        <h2 class="to-do__heading section-heading">Услуги студии</h2>
+
+        <div class="tabs to-do__tabs">
+          <div class="tabs__controls-bar">
+            <button type="button" class="tabs__control tabs-btn-active">Основной перечень</button>
+
+            <span class="tabs__divider"></span>
+
+            <button type="button" class="tabs__control tabs-btn">Услуги по ретуши</button>
+          </div>
+
+          <div class="tabs__panel first">
+            <article class="card-primary card1">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Высокий уровень вовлечения</h3>
+
+                <p class="card-primary__desc">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством...</p>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card2">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Диаграммы связей</h3>
+
+                <p class="card-primary__desc">Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий влечет за собой процесс.</p>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card3">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Высокотехнологичная концепция</h3>
+
+                <p class="card-primary__desc">В частности, убеждённость некоторых оппонентов способствует подготовке и реализации анализа существующих...</p>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card4">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Сложившаяся структура организации</h3>
+
+                <p class="card-primary__desc">Кстати,  сторонники тоталитаризма в науке будут объединены в целые кластеры себе подобных.</p>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card5">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Внутренние резервы и ресурсы</h3>
+
+                <p class="card-primary__desc">Банальные, но неопровержимые выводы, а также ключевые особенности структуры проекта являются только методом.</p>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+          <div class="tabs__panel second none">
+            <article class="card-primary card1">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Принимая во внимание показатели</h3>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card2">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Таким образом, выбранный нами...</h3>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card3">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Также как высокое качество...</h3>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card4">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Безусловно, семантический...</h3>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card5">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Сделанные на базе аналитики выводы...</h3>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card6">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Есть над чем подумать: активные...</h3>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card7">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Сделанные на базе аналитики выводы...</h3>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card8">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Как принято считать, сторонники...</h3>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card9">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Задача организации, в особенности...</h3>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="card-primary card10">
+              <div class="card-primary__img"></div>
+
+              <div class="card-primary__content">
+                <h3 class="card-primary__heading">Активно развивающиеся...</h3>
+
+                <a href="#" class="card-primary__link">
+                  Подробнее
+                  <svg>
+                    <use xlink:href="sprite.svg#arrow "></use>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <aside class="aside">
+        <div class="aside__banner">
+          <div class="aside__banner__info-bar">
+            <p class="aside__banner__info">
+              <span>Акция!</span>
+              <span>Только в июне</span>
+            </p>
+
+            <svg>
+              <use xlink:href="sprite.svg#sale"></use>
+            </svg>
+          </div>
+
+          <h3 class="aside__banner__heading">1,5 часа портретной съемки + ретушь 10 снимков</h3>
+
+          <a href="#" class="aside__banner__link bth-filled">Узнать больше</a>
+        </div>
+
+        <h2 class="aside__heading section-heading">Выполненные работы</h2>
+
+        <div class="aside__gallery">
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-7.webp 1x, img/webp/xl4-7@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-7.webp 1x, img/webp/l4-7@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-7.webp 1x, img/webp/m4-7@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-7.webp 1x, img/webp/s4-7@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-7.jpg 1x, img/jpg/xl4-7@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-7.jpg 1x, img/jpg/l4-7@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-7.jpg 1x, img/jpg/m4-7@2x.jpg 2x">
+
+            <img src="img/jpg/s4-7.jpg" srcset="img/jpg/s4-7@2x.jpg 2x" alt="Первая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-8.webp 1x, img/webp/xl4-8@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-8.webp 1x, img/webp/l4-8@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-8.webp 1x, img/webp/m4-8@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-8.webp 1x, img/webp/s4-8@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-8.jpg 1x, img/jpg/xl4-8@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-8.jpg 1x, img/jpg/l4-8@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-8.jpg 1x, img/jpg/m4-8@2x.jpg 2x">
+
+            <img src="img/jpg/s4-8.jpg" srcset="img/jpg/s4-8@2x.jpg 2x" alt="Вторая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-9.webp 1x, img/webp/xl4-9@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-9.webp 1x, img/webp/l4-9@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-9.webp 1x, img/webp/m4-9@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-9.webp 1x, img/webp/s4-9@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-9.jpg 1x, img/jpg/xl4-9@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-9.jpg 1x, img/jpg/l4-9@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-9.jpg 1x, img/jpg/m4-9@2x.jpg 2x">
+
+            <img src="img/jpg/s4-9.jpg" srcset="img/jpg/s4-9@2x.jpg 2x" alt="Третья работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-10.webp 1x, img/webp/xl4-10@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-10.webp 1x, img/webp/l4-10@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-10.webp 1x, img/webp/m4-10@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-10.webp 1x, img/webp/s4-10@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-10.jpg 1x, img/jpg/xl4-10@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-10.jpg 1x, img/jpg/l4-10@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-10.jpg 1x, img/jpg/m4-10@2x.jpg 2x">
+
+            <img src="img/jpg/s4-10.jpg" srcset="img/jpg/s4-10@2x.jpg 2x" alt="Четвертая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-11.webp 1x, img/webp/xl4-11@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-11.webp 1x, img/webp/l4-11@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-11.webp 1x, img/webp/m4-11@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-11.webp 1x, img/webp/s4-11@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-11.jpg 1x, img/jpg/xl4-11@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-11.jpg 1x, img/jpg/l4-11@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-11.jpg 1x, img/jpg/m4-11@2x.jpg 2x">
+
+            <img src="img/jpg/s4-11.jpg" srcset="img/jpg/s4-11@2x.jpg 2x" alt="Пятая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-12.webp 1x, img/webp/xl4-12@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-12.webp 1x, img/webp/l4-12@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-12.webp 1x, img/webp/m4-12@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-12.webp 1x, img/webp/s4-12@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-12.jpg 1x, img/jpg/xl4-12@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-12.jpg 1x, img/jpg/l4-12@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-12.jpg 1x, img/jpg/m4-12@2x.jpg 2x">
+
+            <img src="img/jpg/s4-12.jpg" srcset="img/jpg/s4-12@2x.jpg 2x" alt="Шестая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-13.webp 1x, img/webp/xl4-13@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-13.webp 1x, img/webp/l4-13@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-13.webp 1x, img/webp/m4-13@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-13.webp 1x, img/webp/s4-13@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-13.jpg 1x, img/jpg/xl4-13@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-13.jpg 1x, img/jpg/l4-13@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-13.jpg 1x, img/jpg/m4-13@2x.jpg 2x">
+
+            <img src="img/jpg/s4-13.jpg" srcset="img/jpg/s4-13@2x.jpg 2x" alt="Седьмая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-14.webp 1x, img/webp/xl4-14@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-14.webp 1x, img/webp/l4-14@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-14.webp 1x, img/webp/m4-14@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-14.webp 1x, img/webp/s4-14@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-14.jpg 1x, img/jpg/xl4-14@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-14.jpg 1x, img/jpg/l4-14@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-14.jpg 1x, img/jpg/m4-14@2x.jpg 2x">
+
+            <img src="img/jpg/s4-14.jpg" srcset="img/jpg/s4-14@2x.jpg 2x" alt="Восьмая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-15.webp 1x, img/webp/xl4-15@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-15.webp 1x, img/webp/l4-15@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-15.webp 1x, img/webp/m4-15@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-15.webp 1x, img/webp/s4-15@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-15.jpg 1x, img/jpg/xl4-15@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-15.jpg 1x, img/jpg/l4-15@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-15.jpg 1x, img/jpg/m4-15@2x.jpg 2x">
+
+            <img src="img/jpg/s4-15.jpg" srcset="img/jpg/s4-15@2x.jpg 2x" alt="Девятая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-16.webp 1x, img/webp/xl4-16@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-16.webp 1x, img/webp/l4-16@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-16.webp 1x, img/webp/m4-16@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-16.webp 1x, img/webp/s4-16@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-16.jpg 1x, img/jpg/xl4-16@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-16.jpg 1x, img/jpg/l4-16@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-16.jpg 1x, img/jpg/m4-16@2x.jpg 2x">
+
+            <img src="img/jpg/s4-16.jpg" srcset="img/jpg/s4-16@2x.jpg 2x" alt="Десятая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-17.webp 1x, img/webp/xl4-17@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-17.webp 1x, img/webp/l4-17@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-17.webp 1x, img/webp/m4-17@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-17.webp 1x, img/webp/s4-17@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-17.jpg 1x, img/jpg/xl4-17@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-17.jpg 1x, img/jpg/l4-17@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-17.jpg 1x, img/jpg/m4-17@2x.jpg 2x">
+
+            <img src="img/jpg/s4-17.jpg" srcset="img/jpg/s4-17@2x.jpg 2x" alt="Одинадцатая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-18.webp 1x, img/webp/xl4-18@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-18.webp 1x, img/webp/l4-18@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-18.webp 1x, img/webp/m4-18@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-18.webp 1x, img/webp/s4-18@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-18.jpg 1x, img/jpg/xl4-18@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-18.jpg 1x, img/jpg/l4-18@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-18.jpg 1x, img/jpg/m4-18@2x.jpg 2x">
+
+            <img src="img/jpg/s4-18.jpg" srcset="img/jpg/s4-18@2x.jpg 2x" alt="Двенадцатая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-19.webp 1x, img/webp/xl4-19@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-19.webp 1x, img/webp/l4-19@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-19.webp 1x, img/webp/m4-19@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-19.webp 1x, img/webp/s4-19@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-19.jpg 1x, img/jpg/xl4-19@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-19.jpg 1x, img/jpg/l4-19@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-19.jpg 1x, img/jpg/m4-19@2x.jpg 2x">
+
+            <img src="img/jpg/s4-19.jpg" srcset="img/jpg/s4-19@2x.jpg 2x" alt="Тринадцатая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-20.webp 1x, img/webp/xl4-20@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-20.webp 1x, img/webp/l4-20@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-20.webp 1x, img/webp/m4-20@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-20.webp 1x, img/webp/s4-20@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-20.jpg 1x, img/jpg/xl4-20@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-20.jpg 1x, img/jpg/l4-20@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-20.jpg 1x, img/jpg/m4-20@2x.jpg 2x">
+
+            <img src="img/jpg/s4-20.jpg" srcset="img/jpg/s4-20@2x.jpg 2x" alt="Четырнадцатая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-21.webp 1x, img/webp/xl4-21@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-21.webp 1x, img/webp/l4-21@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-21.webp 1x, img/webp/m4-21@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-21.webp 1x, img/webp/s4-21@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-21.jpg 1x, img/jpg/xl4-21@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-21.jpg 1x, img/jpg/l4-21@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-21.jpg 1x, img/jpg/m4-21@2x.jpg 2x">
+
+            <img src="img/jpg/s4-21.jpg" srcset="img/jpg/s4-21@2x.jpg 2x" alt="Пятнадцатая работа" />
+          </picture>
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1600px)" srcset="img/webp/xl4-22.webp 1x, img/webp/xl4-22@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/l4-22.webp 1x, img/webp/l4-22@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/m4-22.webp 1x, img/webp/m4-22@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/s4-22.webp 1x, img/webp/s4-22@2x.webp 2x">
+
+            <source media="(min-width: 1600px)" srcset="img/jpg/xl4-22.jpg 1x, img/jpg/xl4-22@2x.jpg 2x">
+            <source media="(min-width: 1024px)" srcset="img/jpg/l4-22.jpg 1x, img/jpg/l4-22@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/jpg/m4-22.jpg 1x, img/jpg/m4-22@2x.jpg 2x">
+
+            <img src="img/jpg/s4-22.jpg" srcset="img/jpg/s4-22@2x.jpg 2x" alt="Шеснадцатая работа" />
+          </picture>
+        </div>
+      </aside>
+    </div>
+    <section id="classes" class="classes">
+      <div class="container classes__container">
+        <h2 class="classes__heading section-heading">Мастер-классы</h2>
+
+        <article class="classes__article article-main">
+          <div class="article-main__img"></div>
+
+          <div class="article-main__content">
+            <div class="article-main__info">
+              <div class="article-main__info__date date">
+                <svg class="date__img">
+                  <use xlink:href="sprite.svg#calendar"></use>
+                </svg>
+                8 июня
+              </div>
+
+              <div class="article-main__info__time time">
+                <svg class="time__img">
+                  <use xlink:href="sprite.svg#watch"></use>
+                </svg>
+                15:00
+              </div>
+            </div>
+
+            <h3 class="article-main__heading">Пленка для начинающих</h3>
+
+            <p class="article-main__desc">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: семантический разбор внешних противодействий, в своём классическом представлении.</p>
+
+            <a href="#" class="article-main__link bth-filled">Узнать больше</a>
+          </div>
+        </article>
+
+        <ul class="classes__list">
+          <li class="classes__item classes__item__1">
+            <article class="article">
+              <div class="article__img"></div>
+
+              <div class="article__content">
+                <div class="article__info">
+                  <div class="article__info__date date">
+                    <svg class="date__img">
+                      <use xlink:href="sprite.svg#calendar"></use>
+                    </svg>
+                    9 июня
+                  </div>
+
+                  <div class="article__info__time time">
+                    <svg class="time__img">
+                      <use xlink:href="sprite.svg#watch"></use>
+                    </svg>
+                    15:00
+                  </div>
+                </div>
+
+                <a href="#" class="article__link">
+                  <h3 class="article__link__content">Ретушь. Продвинутый уровень</h3>
+                </a>
+              </div>
+            </article>
+          </li>
+          <li class="classes__item classes__item__2">
+            <article class="article">
+              <div class="article__img"></div>
+
+              <div class="article__content">
+                <div class="article__info">
+                  <div class="article__info__date date">
+                    <svg class="date__img">
+                      <use xlink:href="sprite.svg#calendar"></use>
+                    </svg>
+                    11 июня
+                  </div>
+
+                  <div class="article__info__time time">
+                    <svg class="time__img">
+                      <use xlink:href="sprite.svg#watch"></use>
+                    </svg>
+                    15:00
+                  </div>
+                </div>
+
+                <a href="#" class="article__link">
+                  <h3 class="article__link__content">Макросъемка. Проблемы и нюансы</h3>
+                </a>
+              </div>
+            </article>
+          </li>
+          <li class="classes__item classes__item__3">
+            <article class="article">
+              <div class="article__img"></div>
+
+              <div class="article__content">
+                <div class="article__info">
+                  <div class="article__info__date date">
+                    <svg class="date__img">
+                      <use xlink:href="sprite.svg#calendar"></use>
+                    </svg>
+                    10 июня
+                  </div>
+
+                  <div class="article__info__time time">
+                    <svg class="time__img">
+                      <use xlink:href="sprite.svg#watch"></use>
+                    </svg>
+                    16:00
+                  </div>
+                </div>
+
+                <a href="#" class="article__link">
+                  <h3 class="article__link__content">Портретная съемка. Свет</h3>
+                </a>
+              </div>
+            </article>
+          </li>
+          <li class="classes__item classes__item__4">
+            <article class="article">
+              <div class="article__img"></div>
+
+              <div class="article__content">
+                <div class="article__info">
+                  <div class="article__info__date date">
+                    <svg class="date__img">
+                      <use xlink:href="sprite.svg#calendar"></use>
+                    </svg>
+                    13 июня
+                  </div>
+
+                  <div class="article__info__time time">
+                    <svg class="time__img">
+                      <use xlink:href="sprite.svg#watch"></use>
+                    </svg>
+                    18:00
+                  </div>
+                </div>
+
+                <a href="#" class="article__link">
+                  <h3 class="article__link__content">Творческая ретушь для начинающих</h3>
+                </a>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="contacts" class="contacts container">
+      <h2 class="contacts__heading section-heading">Контакты</h2>
+
+      <div id="map" class="map">
+        <div class="map__container">
+          <address class="map__address">
+            <p class="map__address__heading">Студия “High pass”</p>
+
+            <p class="map__address__desc">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82</p>
+
+            <a class="map__address__link" href="tel:+749542423532" target="_blank" rel="noreferrer noopener">
+              <svg>
+                <use xlink:href="sprite.svg#phone"></use>
+              </svg>
+              +7 (495) 42-423-532
+            </a>
+          </address>
+
+          <button class="map__address__btn close-btn" type="button" aria-label="скрыть адрес">
+            <svg>
+              <use xlink:href="sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <form class="feedback" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+        <h3 class="feedback__heading">Оставить заявку</h3>
+
+        <p class="feedback__desc">Оставьте ваши данные, указав в графе “Комментарий” желаемые время и дату съемки или другого мероприятия</p>
+
+        <label>
+          <input class="feedback__input error-input" type="text" name="name" placeholder="Имя" aria-label="Введите имя" required>
+
+          <span class="feedback__error">Недопустимый формат</span>
+        </label>
+
+        <label>
+          <input class="feedback__input" type="Email" name="email" placeholder="E-mail" aria-label="Введите email" required>
+
+          <span class="feedback__error none">Недопустимый формат</span>
+        </label>
+
+        <label>
+          <textarea class="feedback__textarea" name="message" placeholder="Комментарий" aria-label="Введите комментарий"></textarea>
+
+          <span class="feedback__error none">Недопустимый формат</span>
+        </label>
+
+        <button class="feedback__btn bth-filled" type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__logo">
+        <a href="#" class="footer__logo__link">
+          <img class="footer__logo__img" src="sprite.svg#logo" alt="Логотип компании">
+        </a>
+
+        <p class="footer__logo__desc">Фотостудия High pass® 2018-2020</p>
+      </div>
+
+      <div class="footer__copy">Которая из моих фотографий самая любимая? Та, которую я собираюсь снять завтра.
+        <span>© Имоджен Каннингем</span>
+      </div>
+
+      <div class="footer__social">
+        <p class="footer__social__desc">Больше интересного:</p>
+
+        <ul class="social footer__social__list">
+          <li class="social__item">
+            <a href="#" class="social__link" rel="noreferrer noopener">
+              <svg class="social__img">
+                <use xlink:href="sprite.svg#insta "></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link" rel="noreferrer noopener">
+              <svg class="social__img">
+                <use xlink:href="sprite.svg#fb "></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link" rel="noreferrer noopener">
+              <svg class="social__img">
+                <use xlink:href="sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+  </footer>
+</body>
+
+</html>

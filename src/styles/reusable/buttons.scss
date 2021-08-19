@@ -1,0 +1,116 @@
+@import 'src/styles/variables_mixins/media';
+@import 'src/styles/variables_mixins/colors';
+@import 'src/styles/variables_mixins/positioning';
+@import 'src/styles/variables_mixins/hover';
+@import 'src/styles/variables_mixins/fonts';
+
+
+.search-btn {
+  @include _flex-align-center;
+  @include _link-primary;
+  padding: 0;
+  fill: $secondary;
+
+  &__img {
+    width: 21px;
+    height: 21px;
+
+    @include _768 {
+      width: 25px;
+      height: 25px;
+    }
+
+    @include _1024 {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+
+.bth-filled {
+  @include _btn-filled;
+  @include _roboto-bold;
+  align-self: start;
+  padding: 9px 19px;
+  border-width: 3px;
+  border-color: $link-primary;
+  border-style: solid;
+  line-height: 16px;
+  color: $secondary;
+  background-color: $link-primary;
+
+  @include _768 {
+    padding: 14px 20px;
+  }
+}
+
+.slider-control {
+  @include _btn-slider;
+  @include _roboto-regular;
+  min-width: 24px;
+  height: 24px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 14px;
+  color: $slider;
+  background-color: $grey-C4;
+
+  @include _768 {
+    min-width: 30px;
+    height: 30px;
+  }
+}
+
+.slider-control-active {
+  @include _btn-slider__active;
+  color: $secondary;
+  background-color: $link-primary;
+}
+
+.empty-btn {
+  @include _btn-empty;
+  @include _roboto-bold;
+  align-self: start;
+  padding: 9px 19px;
+  border-width: 3px;
+  border-color: $link-primary;
+  border-style: solid;
+  line-height: 16px;
+
+  @include _768 {
+    padding: 14px 20px;
+  }
+}
+
+.tabs-btn {
+  @include _btn-tabs;
+  @include _roboto-bold;
+  color: $grey-66;
+  border-bottom-color: $grey-C4;
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+}
+
+.tabs-btn-active {
+  @include _btn-tabs-active;
+  @include _roboto-bold;
+  color: $link-primary;
+  border-bottom-color: $link-primary;
+  border-bottom-style: solid;
+  border-bottom-width: 4px;
+}
+
+.close-btn {
+  @include _btn-close;
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: $grey-66;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}

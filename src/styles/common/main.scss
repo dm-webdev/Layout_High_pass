@@ -1,0 +1,99 @@
+@import 'src/styles/variables_mixins/media';
+@import 'src/styles/variables_mixins/colors';
+
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: $primary;
+  background-color:  $secondary;
+
+  @include _768 {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+picture {
+  font-size: 0;
+  line-height: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 21px;
+
+  @include _768 {
+    padding: 0 27px;
+  }
+
+  @include _1024 {
+    padding: 0 31px;
+  }
+
+  @include _1600 {
+    padding: 0;
+    max-width: 1290px;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.none {
+  display: none !important;
+}
+
+.error-input {
+  border-color: $alert !important;
+}

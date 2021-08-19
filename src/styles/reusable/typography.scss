@@ -1,0 +1,25 @@
+@import 'src/styles/variables_mixins/media';
+@import 'src/styles/variables_mixins/colors';
+@import 'src/styles/variables_mixins/positioning';
+@import 'src/styles/variables_mixins/hover';
+@import 'src/styles/variables_mixins/fonts';
+
+
+.section-heading {
+  @include _tt-bold;
+  font-size: 18px;
+  line-height: 23px;
+
+  @include _768 {
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  @include _1024 {
+    font-size: 24px;
+  }
+
+  @include _1600 {
+    line-height: 14px;
+  }
+}
